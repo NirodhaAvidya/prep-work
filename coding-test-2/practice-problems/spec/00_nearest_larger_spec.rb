@@ -39,6 +39,10 @@ describe "#nearest_larger" do
     nearest_larger([2,4,3,8], 1).should == 3
   end
 
+  it "handles arrays of unusual size" do
+    nearest_larger([12,4,7,0,1,3,5,-4,10],8)
+  end
+
   it "should return nil if no larger number is found" do
     nearest_larger( [2, 6, 4, 8], 3).should == nil
   end
